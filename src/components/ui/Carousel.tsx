@@ -3,10 +3,10 @@ type LaunchProps = {
 };
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Launch } from "../../types/Launch";
 import { ArrowLeft, ArrowRight } from "../../assets/icons/common";
-import type { ServiceError } from "../../types/api";
+import type { ServiceError } from "../../types/Api";
 import Button from "./Button";
 
 const Carousel = ({ data }: LaunchProps) => {

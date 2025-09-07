@@ -3,7 +3,7 @@ import type {
   SpaceXApiQuery,
   ServiceError,
   PaginatedResponse,
-} from "../../types/api";
+} from "../../types/Api";
 import type { HistoryEvent } from "../../types/History";
 import spacexClient from "../clients/spacexClient";
 

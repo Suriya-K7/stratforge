@@ -13,7 +13,7 @@ export function logServiceError(
   service: string,
   action: string,
   details: Record<string, unknown>,
-  error: unknown
+  error: any
 ): ServiceError {
   const status = error.response?.status;
 

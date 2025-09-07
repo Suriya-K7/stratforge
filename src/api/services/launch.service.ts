@@ -1,5 +1,5 @@
 import { logServiceError } from "../../lib/utils";
-import type { ServiceError } from "../../types/api";
+import type { ServiceError } from "../../types/Api";
 import type { Launch } from "../../types/Launch";
 import spacexClient from "../clients/spacexClient";
 

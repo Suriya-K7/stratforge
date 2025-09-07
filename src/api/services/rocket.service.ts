@@ -1,5 +1,5 @@
-import type { SpaceXApiQuery, ServiceError } from "../../types/api";
-import type { PaginatedResponse } from "../../types/api";
+import type { SpaceXApiQuery, ServiceError } from "../../types/Api";
+import type { PaginatedResponse } from "../../types/Api";
 import spacexClient from "../clients/spacexClient";
 import { logServiceError } from "../../lib/utils";
 import type { Rocket } from "../../types/Rocket";
