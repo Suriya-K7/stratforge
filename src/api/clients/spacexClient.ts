@@ -18,6 +18,7 @@ import axios, { type AxiosInstance } from "axios";
  * const response = await spacexClient.get("/rockets");
  * console.log(response.data);
  * ```
+ * @author [Suriya](www.github.com/suriya-k7)
  */
 const spacexClient: AxiosInstance = axios.create({
   baseURL: "https://api.spacexdata.com/v4",

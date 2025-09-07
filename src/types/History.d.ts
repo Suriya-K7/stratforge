@@ -1,5 +1,3 @@
-import type { PaginatedResponse } from "./api";
-
 /**
  * Represents a SpaceX historical event or milestone.
  *

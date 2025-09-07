@@ -1,3 +1,11 @@
+/**
+ * Centralized route constants
+ *
+ * @example
+ * ROUTES.ROCKET_DETAIL // "/rockets/:id"
+ *
+ * @author [Suriya](https://github.com/suriya-k7)
+ */
 const ROUTES = {
   HOME: "/",
   HISTORY: "/history",

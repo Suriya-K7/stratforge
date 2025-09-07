@@ -2,14 +2,12 @@ const CompanyLogo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      //   xmlns:xlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
       width="331.644px"
       height="40.825px"
       viewBox="0 0 331.644 40.825"
       enableBackground="new 0 0 331.644 40.825"
-      //   xml:space="preserve"
       {...props}
     >
       <g>

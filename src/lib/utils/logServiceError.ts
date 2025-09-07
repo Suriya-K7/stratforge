@@ -1,4 +1,4 @@
-import type { ServiceError } from "../../types/api";
+import type { ServiceError } from "../../types/Api";
 
 /**
  * Logs standardized service errors in a consistent format.
@@ -13,7 +13,7 @@ export function logServiceError(
   service: string,
   action: string,
   details: Record<string, unknown>,
-  error: any
+  error: unknown
 ): ServiceError {
   const status = error.response?.status;
 
