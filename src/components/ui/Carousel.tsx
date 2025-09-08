@@ -58,7 +58,7 @@ const Carousel = ({ data }: LaunchProps) => {
                   alt={`Slide ${idx}`}
                   className="w-full h-48 object-cover rounded-lg"
                 />
-                <Button>Visit Launch</Button>
+                {/* <Button>Visit Launch</Button> */}
               </div>
             </div>
           ))}
