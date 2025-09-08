@@ -6,6 +6,7 @@ import NavBarMobile from "./NavBarMobile";
 import RocketDetailsSkeleton from "./RocketDetailsSkeleton";
 import RocketCardSkeleton from "./RocketSkeleton";
 import SkeletonLoading from "./SkeletonLoading";
+import SplachScreen from "./SplachScreen";
 export {
   NavBar,
   NavBarMobile,
@@ -15,4 +16,5 @@ export {
   RocketCardSkeleton,
   RocketDetailsSkeleton,
   HistorySkeleton,
+  SplachScreen,
 };

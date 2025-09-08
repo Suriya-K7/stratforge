@@ -1,6 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import { History, Home, Launch, Rocket, RocketDetails } from "../pages";
+import {
+  History,
+  Home,
+  Launch,
+  PageNotFound,
+  Rocket,
+  RocketDetails,
+} from "../pages";
 import ROUTES from "../lib/constants/routes";
+import { Suspense } from "react";
+import { SplachScreen } from "../components/ui";
 
 /**
  * AppRouter
@@ -10,24 +19,21 @@ import ROUTES from "../lib/constants/routes";
  */
 const AppRouter = () => {
   return (
-    <Routes>
-      {/* Landing Page */}
-      <Route path={ROUTES.HOME} element={<Home />} />
+    <Suspense fallback={<SplachScreen />}>
+      <Routes>
+        {/* Landing Page */}
+        <Route path={ROUTES.HOME} element={<Home />} />
 
-      {/* Menu Pages */}
-      <Route path={ROUTES.HISTORY} element={<History />} />
-      <Route path={ROUTES.LAUNCHES} element={<Launch />} />
-      <Route path={ROUTES.ROCKETS} element={<Rocket />} />
-      <Route path={ROUTES.ROCKET_DETAIL} element={<RocketDetails />} />
+        {/* Menu Pages */}
+        <Route path={ROUTES.HISTORY} element={<History />} />
+        <Route path={ROUTES.LAUNCHES} element={<Launch />} />
+        <Route path={ROUTES.ROCKETS} element={<Rocket />} />
+        <Route path={ROUTES.ROCKET_DETAIL} element={<RocketDetails />} />
 
-      {/* Page not found */}
-      <Route
-        path={ROUTES.NOT_FOUND}
-        element={
-          <h1 className="text-center mt-10 text-2xl">404 - Page Not Found</h1>
-        }
-      />
-    </Routes>
+        {/* Page not found */}
+        <Route path={ROUTES.NOT_FOUND} element={<PageNotFound />} />
+      </Routes>
+    </Suspense>
   );
 };
 
