@@ -3,7 +3,7 @@ type LaunchProps = {
 };
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Launch } from "../../types/Launch";
 import { ArrowLeft, ArrowRight } from "../../assets/icons/common";
 import type { ServiceError } from "../../types/Api";
@@ -24,6 +24,15 @@ const Carousel = ({ data }: LaunchProps) => {
       Array.isArray(data) && prev === data?.length - 1 ? 0 : prev + 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="relative w-full max-w-2xl mx-auto overflow-hidden">
