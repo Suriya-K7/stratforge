@@ -54,11 +54,7 @@ export class SpaceXRocketService {
   static async getRocketById(id: string): Promise<Rocket | ServiceError> {
     const endpoint = `/rockets/${id}`;
     try {
-      console.log("id", id);
-
       const { data } = await spacexClient.get<Rocket>(endpoint);
-
-      console.log(data);
 
       return data;
     } catch (error: unknown) {

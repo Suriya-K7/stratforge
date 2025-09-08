@@ -6,7 +6,6 @@ import type { Rocket } from "../types/Rocket";
 
 const Rocket = () => {
   const { data, isLoading } = useAllRockets();
-  console.log({ data, isLoading });
 
   return (
     <Applayout>

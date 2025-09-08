@@ -7,11 +7,9 @@ import { useEffect, useState } from "react";
 import type { Launch } from "../../types/Launch";
 import { ArrowLeft, ArrowRight } from "../../assets/icons/common";
 import type { ServiceError } from "../../types/Api";
-import Button from "./Button";
 
 const Carousel = ({ data }: LaunchProps) => {
   const [current, setCurrent] = useState(0);
-  console.log(data);
 
   const prevSlide = () => {
     setCurrent((prev) =>

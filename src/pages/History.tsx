@@ -8,8 +8,6 @@ const History = () => {
 
   const historyEvents = data as HistoryEvent[];
 
-  console.log(data);
-
   return (
     <Applayout>
       <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>

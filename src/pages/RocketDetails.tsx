@@ -22,7 +22,7 @@ const RocketDetails = () => {
 
       {isLoading && <RocketDetailsSkeleton />}
       {/* Hero Section */}
-      {rocketData && (
+      {rocketData?.id && (
         <div className="relative w-full h-[400px] overflow-hidden rounded-xl shadow-lg mt-4">
           <img
             src={
@@ -43,7 +43,7 @@ const RocketDetails = () => {
       )}
 
       {/* Details Section */}
-      {rocketData && (
+      {rocketData?.id ? (
         <div className="py-12 max-w-4xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-gray-400 leading-relaxed">
             {rocketData.description}
@@ -94,6 +94,18 @@ const RocketDetails = () => {
               <Button>Learn More</Button>
             </a>
             <Button onClick={() => navigate(-1)}>Go Back</Button>
+          </div>
+        </div>
+      ) : (
+        <div className="text-center h-[calc(100vh-40vh)] flex items-center justify-center flex-col gap-4">
+          <h1 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            Data Not Found
+          </h1>
+          <p className="mt-6 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+            Sorry, we couldn’t find the data you’re looking for.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <Button onClick={() => navigate(-1)}>Go back</Button>
           </div>
         </div>
       )}
